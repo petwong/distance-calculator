@@ -14,6 +14,10 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation('org.elasticsearch:elasticsearch:8.8.0') {
+        // cannot resolve
+        exclude group: 'org.elasticsearch', module: 'elasticsearch-preallocate'
+    }
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
